@@ -4,21 +4,23 @@ import joblib
 # تحميل النموذج
 model = joblib.load("depression_risk_model1.pkl")
 
+# إضافة CSS لتوسيط النصوص
 st.markdown(
     """
     <style>
-    .right-align {
-        text-align: right;
-        font-size: 18px;
+    .centered-title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# إدخال عدد الدقائق مع محاذاة لليمين
-st.markdown('<div class="right-align">أدخل عدد دقائق استخدام جهازك في اليوم</div>', unsafe_allow_html=True)
-app_usage = st.number_input("", min_value=0)
+# عنوان التطبيق مع التوسيط
+st.markdown('<div class="centered-title">تقييم خطر الاكتئاب بناءً على وقت استخدام الجهاز</div>', unsafe_allow_html=True)
+
 # إدخال عدد الدقائق
 app_usage = st.number_input("أدخل عدد دقائق استخدام جهازك في اليوم", min_value=00)
 
