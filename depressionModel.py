@@ -22,7 +22,7 @@ st.markdown(
 st.markdown('<div class="centered-title">تقييم خطر الاكتئاب بناءً على وقت استخدام الجهاز</div>', unsafe_allow_html=True)
 
 # إدخال عدد الدقائق
-app_usage = st.number_input("أدخل عدد دقائق استخدام التطبيق في اليوم:", min_value=00)
+app_usage = st.number_input("أدخل عدد دقائق استخدام جهازك في اليوم:", min_value=00)
 
 # زر التقييم
 if st.button("تقييم"):
