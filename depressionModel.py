@@ -13,16 +13,27 @@ st.markdown(
         font-size: 30px;
         font-weight: bold;
     }
+    .right-align {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    div.stButton > button {
+        display: block;
+        margin: 20px auto;
+    }
     </style>
     """,
     unsafe_allow_html=True,
 )
-
 # عنوان التطبيق مع التوسيط
 st.markdown('<div class="centered-title">تقييم خطر الاكتئاب بناءً على وقت استخدام الجهاز</div>', unsafe_allow_html=True)
 
-# إدخال عدد الدقائق
-app_usage = st.number_input("أدخل عدد دقائق استخدام جهازك في اليوم", min_value=00)
+
+# إدخال عدد الدقائق مع محاذاة لليمين
+st.markdown('<div class="right-align">أدخل عدد دقائق استخدام جهازك في اليوم</div>', unsafe_allow_html=True)
+app_usage = st.number_input("", min_value=0)
+
 
 # زر التقييم
 if st.button("تقييم"):
