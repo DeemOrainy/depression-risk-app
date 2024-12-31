@@ -39,4 +39,9 @@ st.markdown('<div class="center-button"><button type="button">تقييم</button
 
 # تنفيذ المنطق عند النقر على الزر
 if st.button("تقييم"):
-    user_data = [[
+    user_data = [[app_usage]]
+    prediction = model.predict(user_data)
+    if prediction[0] == 1:
+        st.write("⚠️ هناك احتمال لإصابتك بالاكتئاب.")
+    else:
+        st.write("✅ لا يوجد خطر للإصابة بالاكتئاب.")
