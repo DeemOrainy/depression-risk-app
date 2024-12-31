@@ -40,6 +40,6 @@ if st.button("تقييم"):
     user_data = [[app_usage]]
     prediction = model.predict(user_data)
     if prediction[0] == 1:
-        st.write("⚠️ هناك احتمال لإصابتك بالاكتئاب.")
+        st.markdown('<div class="right-align">⚠️ هناك احتمال لإصابتك بالاكتئاب</div>', unsafe_allow_html=True)
     else:
-        st.write("✅ لا يوجد خطر للإصابة بالاكتئاب.")
+        st.markdown('<div class="right-align">✅ لا يوجد خطر للإصابة بالاكتئاب</div>', unsafe_allow_html=True)
